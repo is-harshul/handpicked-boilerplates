@@ -1,0 +1,22 @@
+{
+  "name": "multi-tenant-adapters",
+  "version": "0.1.0",
+  "description": "Multi-tenant frontend architecture using a build-time __TENANT_ADAPTERS__ token rewrite. Shared components, per-tenant adapter folders, one stable facade layer.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build:acme": "BROKER=acme webpack --config webpack.common.js",
+    "build:globex": "BROKER=globex webpack --config webpack.common.js",
+    "test:acme": "BROKER=acme jest",
+    "test:globex": "BROKER=globex jest"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "typescript": "^5.4.0"
+  }
+}
